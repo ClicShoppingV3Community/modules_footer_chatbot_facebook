@@ -1,0 +1,2 @@
+module_footer_facebook_chatbox_title = Facebook Chat Box
+module_footer_facebook_chatbox_description = Ajoutez Facebook SDK et Messanger Chat
