@@ -13,8 +13,8 @@
   use ClicShopping\OM\CLICSHOPPING;
 
   class fo_facebook_chatbox {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -28,7 +28,7 @@
       $this->title = CLICSHOPPING::getDef('module_footer_facebook_chatbox_title');
       $this->description = CLICSHOPPING::getDef('module_footer_facebook_chatbox_description');
 
-      if (defined('MODULES_FOOTER_FACEBOOK_CHATBOX_STATUS')) {
+      if (\defined('MODULES_FOOTER_FACEBOOK_CHATBOX_STATUS')) {
         $this->sort_order = MODULES_FOOTER_FACEBOOK_CHATBOX_SORT_ORDER;
         $this->enabled = (MODULES_FOOTER_FACEBOOK_CHATBOX_STATUS == 'True');
       }
@@ -82,7 +82,7 @@
   }
 
   public function check() {
-    return defined('MODULES_FOOTER_FACEBOOK_CHATBOX_STATUS');
+    return \defined('MODULES_FOOTER_FACEBOOK_CHATBOX_STATUS');
   }
 
   public function install() {
